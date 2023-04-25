@@ -53,18 +53,9 @@ THEN I should have proper build scripts for a webpack application
 ## Installation
 
 ```md
-Right click on the E-Commerce-Back-End folder and click "Open in integrated terminal" 
+Right click on the main directory and click "Open in integrated terminal" 
 type "npm i" to install dependencies
-type "cd .." to return to the previous directory
-type "cd db" to enter the db folder
-type "mysql -u root -p" then enter your password
-type "source schema.sql"
-type "exit" to terminate mysql
-type "cd .." to return to the previous directory
-type "cd seeds" to enter the seeds folder
-type "node index.js" to seed the database
-type "cd .." to return to the previous directory
-type "npm start" to start the database
+type "npm run start" to start the database
 ```
 
 ## Application Demonstrations
