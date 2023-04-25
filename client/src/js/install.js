@@ -1,24 +1,22 @@
 const butInstall = document.getElementById('buttonInstall');
 
+// Prompts For Installation
 window.addEventListener('beforeinstallprompt', (event) => {
-  event.preventDefault();
   window.deferredPrompt = event;
-  butInstall.style.display = 'block';
+  butInstall.classList.toggle("hidden", false);
 });
 
-butInstall.addEventListener('click', async () => {
-  const promptEvent = window.deferredPrompt;
-  if (promptEvent) {
-    promptEvent.prompt();
-    const userChoice = await promptEvent.userChoice;
-    if (userChoice.outcome === 'accepted') {
-      console.log('User Accepted');
-    } else {
-      console.log('User Rejected');
-    }
-    window.deferredPrompt = null;
-    butInstall.style.display = 'none';
-  }
+// Installs App
+butInstall.addEventListener("click", async () => {
+	const promptEvent = window.deferredPrompt;
+	if (!promptEvent) {
+		return;
+	}
+	promptEvent.prompt();
+	window.deferredPrompt = null;
+	butInstall.classList.toggle("hidden", true);
 });
 
-window.addEventListener('appinstalled', (event) => {console.log('App installed');});
+window.addEventListener('appinstalled', (event) => { 
+	window.deferredPrompt = null;
+});

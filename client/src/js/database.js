@@ -14,21 +14,23 @@ const initdb = async () =>
 
 // Adds Text To indexedDB
 export const putDb = async (content) => {
-  const jateDb = await openDB("jate", 1);
-  const tx = jateDb.transaction("jate", "readwrite");
-  const store = tx.objectStore("jate");
-  await store.put({ content: content });
-  await tx.done;
+	const jateDb = await openDB("jate", 1);
+	const tx = jateDb.transaction("jate", "readwrite");
+	const store = tx.objectStore("jate");
+	const request = store.put({ id: id, jate: content });
+	const result = await request;
+	console.log("Saved To The Database", result);
 };
 
 // Gets Text From indexedDB
 export const getDb = async () => {
   const jateDb = await openDB("jate", 1);
-  const tx = jateDb.transaction("jate", "readonly");
-  const store = tx.objectStore("jate");
-  const contentList = await store.getAll();
-  await tx.done;
-  return contentList;
+	const tx = jateDb.transaction("jate", "readonly");
+	const store = tx.objectStore("jate");
+	const request = store.getAll();
+	const result = await request;
+	console.log('result.value', result);
+    return result;
 };
 
 initdb();

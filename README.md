@@ -69,10 +69,7 @@ type "npm start" to start the database
 
 ## Application Demonstrations
 
-![](./public/images/demo1.png)
-![](./public/images/demo2.png)
-![](./public/images/demo3.png)
-
+![](./assets/demo.png)
 
 ## Live Application
 
