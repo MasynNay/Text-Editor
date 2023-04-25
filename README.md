@@ -55,7 +55,7 @@ THEN I should have proper build scripts for a webpack application
 ```md
 Right click on the main directory and click "Open in integrated terminal" 
 type "npm i" to install dependencies
-type "npm run start" to start the database
+type "npm run start" to start
 ```
 
 ## Application Demonstrations
