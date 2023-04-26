@@ -28,7 +28,7 @@ module.exports = () => {
         inject: true,
         name: "Just Another Text Editor",
         short_name: "J.A.T.E.",
-        description: "Create notes with or without an internet connection!",
+        description: "Create Notes Online Or Offline!",
         background_color: "#272822",
         theme_color: "#272822",
         start_url: "./",
@@ -42,7 +42,6 @@ module.exports = () => {
         ],
       }),
     ],
-
     module: {
       rules: [
         {
