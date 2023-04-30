@@ -1,6 +1,6 @@
 # Tech Blog
 
-## Module-14 Model-View-Controller:
+## Module-19:
 ```md
 A text editor that runs in the browser. This text editor features a number of data persistence techniques that serve as redundancy in case one of the options is not supported by the browser. This application also functions offline.
 ```
